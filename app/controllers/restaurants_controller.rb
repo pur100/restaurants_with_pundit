@@ -20,8 +20,11 @@ class RestaurantsController < ApplicationController
   def edit
   end
 
+  def top
+    @restaurants = Restaurant.first(5)
+  end
+
   def last_restaurants
-    
   end
 
   # POST /restaurants or /restaurants.json
