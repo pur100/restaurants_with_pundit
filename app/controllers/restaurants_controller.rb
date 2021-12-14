@@ -20,6 +20,10 @@ class RestaurantsController < ApplicationController
   def edit
   end
 
+  def top
+    @restaurants = Restaurant.first(5)
+  end
+
   # POST /restaurants or /restaurants.json
   def create
     @restaurant = Restaurant.new(restaurant_params)
